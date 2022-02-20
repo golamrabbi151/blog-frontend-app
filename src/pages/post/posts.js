@@ -1,47 +1,53 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useSearchParams } from "react-router-dom";
+import { getPosts } from "../../data";
 function Posts() {
+  const posts = getPosts();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   return (
     <div style={{ display: "flex" }}>
-      <nav>
-        <NavLink
-          style={({ isActive }) => {
-            return {
-              display: "block",
-              margin: "1rem 0",
-              color: isActive ? "green" : "black",
-            };
+      <nav
+        style={{
+          borderRight: "solid 1px",
+          padding: "1rem",
+        }}
+      >
+        <input
+          value={searchParams.get("filter") || ""}
+          onChange={(event) => {
+            let filter = event.target.value;
+            if (filter) {
+              setSearchParams({ filter });
+            } else {
+              setSearchParams({});
+            }
           }}
-          to={"/posts/10"}
-          key={"10"}
-        >
-          {"Hello world 10"}
-        </NavLink>
-        <NavLink
-          style={({ isActive }) => {
-            return {
-              display: "block",
-              margin: "1rem 0",
-              color: isActive ? "green" : "black",
-            };
-          }}
-          to={"/posts/11"}
-          key={"11"}
-        >
-          {"Hello world 11"}
-        </NavLink>
-        <NavLink
-          style={({ isActive }) => {
-            return {
-              display: "block",
-              margin: "1rem 0",
-              color: isActive ? "green" : "black",
-            };
-          }}
-          to={"/posts/12"}
-          key={"12"}
-        >
-          {"Hello world 12"}
-        </NavLink>
+        />
+        {posts
+          .filter((post) => {
+            let filter = searchParams.get("filter");
+            if (!filter) {
+              return true;
+            } else {
+              let title = post.title.toLowerCase();
+              return title.match(filter.toLowerCase());
+            }
+          })
+          .map((post) => (
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  display: "block",
+                  margin: "1rem 0",
+                  color: isActive ? "green" : "black",
+                };
+              }}
+              to={`/posts/${post.id}`}
+              key={post.id}
+            >
+              {post.title}
+            </NavLink>
+          ))}
       </nav>
       <Outlet />
     </div>
