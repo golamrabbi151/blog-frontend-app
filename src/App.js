@@ -1,17 +1,11 @@
-import { Outlet, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/home/index";
+import NavBar from "./components/header/navBar";
 function App() {
   return (
     <div>
-      <nav
-        style={{
-          borderBottom: "solid 1px blue",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to={"/category"}>Category</Link> {" | "}
-        <Link to={"/posts"}>Posts</Link>
-      </nav>
-      <Outlet />
+      <NavBar />
+      <Home />
     </div>
   );
 }
