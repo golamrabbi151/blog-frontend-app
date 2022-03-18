@@ -1,31 +1,23 @@
 import React from "react";
+import "./style.css";
 
 function PostList(params) {
   const post = params.value;
   return (
-    <div className="d-flex pt-5">
-      <div className="flex-shrink-0">
+    <div className="row pt-5">
+      <div className="col-md-5 ">
         <img
+          className="rounded float-start"
           src={`/image/${post.image}`}
           alt="..."
-          style={{ width: "400px" }}
+          style={{ maxWidth: "100%" }}
         />
       </div>
-      <div className="flex-grow-1 ms-3">
-        <p
-          style={{
-            // whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            // maxWidth: "200px",
-            height: "196px",
-          }}
-        >
-          {post.descriptions}{" "}
-          <button type="button" className="btn btn-primary btn-sm">
-            more..
-          </button>
-        </p>
+      <div className="col-md-7">
+        <div className="p-2">
+          <h1>{post.title}</h1>
+          <p className="post-short-description">{post.descriptions}</p>
+        </div>
       </div>
     </div>
   );

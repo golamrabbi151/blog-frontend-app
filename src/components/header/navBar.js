@@ -10,7 +10,7 @@ import {
 
 function NavBar() {
   return (
-    <div className="container-fluid shadow-sm" sticky="top">
+    <div className="container-fluid shadow-sm sticky-top">
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>

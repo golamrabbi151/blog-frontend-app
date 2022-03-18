@@ -1,0 +1,5 @@
+.post-short-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 96px;
+}
