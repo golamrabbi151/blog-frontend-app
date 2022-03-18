@@ -11,16 +11,21 @@ function PostList(params) {
           style={{ width: "400px" }}
         />
       </div>
-      <div
-        className="flex-grow-1 ms-3"
-        style={{
-          //   whiteSpace: "nowrap",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          width: "200px",
-        }}
-      >
-        {post.descriptions}
+      <div className="flex-grow-1 ms-3">
+        <p
+          style={{
+            // whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            // maxWidth: "200px",
+            height: "196px",
+          }}
+        >
+          {post.descriptions}{" "}
+          <button type="button" className="btn btn-primary btn-sm">
+            more..
+          </button>
+        </p>
       </div>
     </div>
   );
