@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 function PostList(params) {
@@ -19,7 +19,6 @@ function PostList(params) {
           <h1>
             <NavLink to={`post/${post.id}`}>{post.title}</NavLink>
           </h1>
-          <Outlet />
           <p className="post-short-description">{post.descriptions}</p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { getPosts } from "../../static/data/data";
 function PopularPost() {
   const [popularPost, setPopularPost] = useState([]);
@@ -18,7 +18,6 @@ function PopularPost() {
           <h1 className="fs-6">{data.title}</h1>
         </div>
       </NavLink>
-      <Outlet />
     </div>
   ));
   return (
