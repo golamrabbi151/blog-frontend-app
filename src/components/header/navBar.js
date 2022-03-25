@@ -1,25 +1,16 @@
 import { NavLink } from "react-router-dom";
-// import {
-//   Button,
-//   Container,
-//   Form,
-//   FormControl,
-//   Navbar,
-//   Nav,
-//   NavDropdown,
-// } from "react-bootstrap";
 
 function NavBar() {
   return (
     <div className="container-fluid shadow-sm sticky-top">
       <div className="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#Logo">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#Logo">
               Navbar
             </a>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -27,23 +18,26 @@ function NavBar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <NavLink class="nav-link active" to={`/`}>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <NavLink className="nav-link active" to={`/`}>
                     Home
                   </NavLink>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#About">
+                <li className="nav-item">
+                  <a className="nav-link" href="#About">
                     About
                   </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     href="# "
                     id="navbarDropdown"
                     role="button"
@@ -52,41 +46,44 @@ function NavBar() {
                   >
                     Category
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
                     <li>
-                      <a class="dropdown-item" href="#Action">
+                      <a className="dropdown-item" href="#Action">
                         Action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#about">
+                      <a className="dropdown-item" href="#about">
                         About
                       </a>
                     </li>
                     <li>
-                      <hr class="dropdown-divider" />
+                      <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#Something">
+                      <a className="dropdown-item" href="#Something">
                         Something else here
                       </a>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#disable">
+                <li className="nav-item">
+                  <a className="nav-link disabled" href="#disable">
                     Disabled
                   </a>
                 </li>
               </ul>
-              <form class="d-flex">
+              <form className="d-flex">
                 <input
-                  class="form-control me-2"
+                  className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button class="btn btn-outline-success" type="submit">
+                <button className="btn btn-outline-success" type="submit">
                   Search
                 </button>
               </form>

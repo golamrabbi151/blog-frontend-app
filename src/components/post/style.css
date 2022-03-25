@@ -3,3 +3,38 @@
   text-overflow: ellipsis;
   height: 96px;
 }
+
+.postsHeading {
+  font-size: 20px;
+  margin-bottom: 5px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.postsHeading a {
+  text-decoration: none;
+  color: black;
+}
+.postsHeading a:hover {
+  color: rgb(23, 124, 240);
+  text-decoration: revert;
+}
+
+.popularPostImage img {
+  width: 72px;
+  height: 72px;
+  border-radius: 3px;
+}
+.popularPostHeading {
+  text-decoration: none;
+  color: black;
+}
+.popularPostHeading h1 {
+  font-size: 15px;
+}
+.popularPostHeading:hover {
+  color: rgb(23, 124, 240);
+  text-decoration: revert;
+}
+.singlePost p {
+  text-align: justify;
+}

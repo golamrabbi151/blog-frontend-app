@@ -16,7 +16,7 @@ function PostList(params) {
       </div>
       <div className="col-md-7">
         <div className="p-2">
-          <h1>
+          <h1 className="postsHeading">
             <NavLink to={`post/${post.id}`}>{post.title}</NavLink>
           </h1>
           <p className="post-short-description">{post.descriptions}</p>
