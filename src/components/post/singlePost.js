@@ -1,16 +1,21 @@
-import "./style.css"
+import "./style.css";
 function SinglePost(params) {
   const post = params.value;
-  console.log("single post data: ", post);
   return (
     <div>
-      {/* <div style={{ padding: "1rem" }}> */}
-      <div className="singlePost" >
-        <h1> {post.title} </h1>
-        <small>Date: {post.date}</small>
+      <div className="singlePost">
+        <div className="single-post-image pt-5 pb-5">
+          <img
+            src={post ? `/image/${post.image}` : ""}
+            alt="..."
+            width={"100%"}
+          />
+        </div>
+        <h1 className="fs-3"> {post?.title || ""} </h1>
+        <i>Date: {post?.date || ""}</i>
         {" | "}
-        <small>Like: {post.like}</small>
-        <p>{post.descriptions}</p>
+        <i>Like: {post?.like || ""}</i>
+        <p className="pt-2">{post?.descriptions || ""}</p>
       </div>
     </div>
   );
