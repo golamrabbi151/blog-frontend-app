@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/home/index";
 import NavBar from "./components/header/navBar";
 import Post from "./pages/post/post";
+import Footer from "./components/footer/footer";
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
             <Post />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
