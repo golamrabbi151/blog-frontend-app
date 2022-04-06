@@ -1,69 +1,35 @@
-import { Button, Form } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-} from "react-icons/ai";
+import { Button, Form, FloatingLabel } from "react-bootstrap";
 
 function Footer() {
   return (
-    <div className="container-fluid bg-dark mt-5">
+    <div
+      className="container-fluid bg-dark "
+      style={{ position: "absolute", bottom: "0" }}
+    >
       <div className="container">
-        <div className="row pt-5">
-          <div className="col-md-4">
-            <img
-              src={`image/imh.jpeg`}
-              alt="..."
-              width={"200px"}
-              className="rounded"
-            />
-            <div>
-              <a
-                href="https://github.com/golamrabbi151"
-                target="_blank"
-                rel="noreferrer"
-                className="shadow-lg rounded-circle fs-2 text-white"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/golamrabbi151/"
-                target="_blank"
-                rel="noreferrer"
-                className="shadow-lg rounded-circle fs-2 text-white"
-              >
-                <AiFillLinkedin />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/golamrabbi151/"
-                target="_blank"
-                rel="noreferrer"
-                className="shadow-lg rounded-circle fs-2 text-white"
-              >
-                <AiFillTwitterCircle />
-              </a>
-            </div>
-          </div>
-          <div className="col-md-6">
+        <div className="col-md-6 offset-md-3">
+          <div className="pt-5 pb-5">
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
+              <FloatingLabel
+                controlId="floatingInput"
+                label="Email address"
+                className="mb-3"
+              >
+                <Form.Control type="email" placeholder="name@example.com" />
+              </FloatingLabel>
+              <FloatingLabel
+                controlId="floatingTextarea2"
+                label="Write your message"
+              >
+                <Form.Control
+                  as="textarea"
+                  placeholder="Leave a message here"
+                  style={{ height: "100px" }}
+                />
+              </FloatingLabel>
+              <div className="mt-3">
+                <Button variant="primary w-100">Submit</Button>
+              </div>
             </Form>
           </div>
         </div>

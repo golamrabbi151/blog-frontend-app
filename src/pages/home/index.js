@@ -20,7 +20,8 @@ function Home() {
     </div>
   ));
   return (
-    <div className="container">
+    //
+    <div className="container" style={{ paddingBottom: "23.5rem" }}>
       <div className="row">
         {/* post list */}
         <div className="col-md-9">

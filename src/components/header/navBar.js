@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Container,
   Button,
@@ -29,7 +29,8 @@ function NavBar() {
               style={{ maxHeight: "150px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/" bg="dark" variant="dark">
+              <Nav.Link as={NavLink} to="/">
+                {/* <Nav.Link as={Link} to="/" > */}
                 Home
               </Nav.Link>
               <NavDropdown title="Category" id="navbarScrollingDropdown">
@@ -42,7 +43,7 @@ function NavBar() {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as={Link} to="#about">
+              <Nav.Link as={NavLink} to="/about">
                 About
               </Nav.Link>
             </Nav>
